@@ -104,7 +104,7 @@ Cold outreach on LinkedIn is awkward for everyone. This skill doesn't try to mak
 
 Generic messages get ignored. This one won't be.
 
-## LicenseUsing with other AI tools? 
+## Using with other AI tools? 
 
 The logic in SKILL.md works as a system prompt for any LLM — paste it into ChatGPT Custom Instructions, a GPT system prompt, or Cursor rules.
 
