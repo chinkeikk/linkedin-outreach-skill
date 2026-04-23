@@ -35,7 +35,7 @@ Every InMail comes with **two ending options**:
 
 ### Claude.ai (Web/Mobile)
 
-1. Download `linkedin-outreach.skill` from [Releases](#)
+1. Download `linkedin-outreach.skill` from [Releases](https://github.com/chinkeikk/linkedin-outreach-skill/releases/tag/v1.0.0)
 2. Go to Claude.ai → Settings → Skills → Install Skill
 3. Upload the `.skill` file
 
