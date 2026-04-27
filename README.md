@@ -15,7 +15,7 @@ Paste a job description. Claude compares it against your background and tells yo
 **Phase 2 — Write the Message**
 Found someone to contact? Tell Claude their name, role, and your relationship. Claude writes:
 - A **LinkedIn Connect invitation** (≤300 characters, LinkedIn's hard limit)
-- An **InMail message** tailored to who you're talking to
+- An **InMail message** tailored to who you're talking to — including 3 subject line options to pick from
 
 Both messages adapt based on context — an alumni you've never met gets a different tone than a recruiter at your target company.
 
@@ -27,24 +27,19 @@ Both messages adapt based on context — an alumni you've never met gets a diffe
 | Hiring Manager | Interview / next steps | Attached with InMail |
 | Employee / Alumni | Referral or introduction | "Happy to share if helpful" |
 
-Every InMail comes with **two ending options**:
-- **Option A (default)** — Low pressure, gives them an easy out
-- **Option B** — Asks for a quick chat, for when the vibe feels right
+Every InMail comes in **three versions** so you can pick what fits the situation:
+
+- **Option A — Standard (default)** — Full message, low-pressure ending. Gives them an easy out. Works for most cold outreach. ~100-150 words.
+- **Option B — Quick Chat** — Same as A but ends with a chat request. Use when their profile feels open to conversation, or when you have a stronger common thread.
+- **Option C — Minimalist** — About half the length of A (~50-75 words). Three sentences: I applied, here's my one strongest match point, here's what I'm asking for. Use when you want to respect their time, or when you suspect they're slammed.
 
 ## Installation
 
-### Claude.ai (Web/Mobile)
+1. Download `SKILL.md` from this repo
+2. Go to Claude.ai → Settings → Capabilities → Skills
+3. Create a new skill and paste in the content (or upload the file, depending on your interface)
 
-1. Download `linkedin-outreach.skill` from [Releases](https://github.com/chinkeikk/linkedin-outreach-skill/releases/tag/v1.0.0)
-2. Go to Claude.ai → Settings → Skills → Install Skill
-3. Upload the `.skill` file
-
-### Claude Code
-
-```bash
-mkdir -p ~/.claude/skills/linkedin-outreach
-cp SKILL.md ~/.claude/skills/linkedin-outreach/
-```
+That's it. The skill activates whenever you mention LinkedIn outreach, job analysis, or paste a JD.
 
 ## How to Use
 
@@ -77,9 +72,12 @@ Hi Sarah, I recently applied for the Senior PM, Growth role at Airbnb
 and wanted to connect directly. Would love to stay on your radar!
 ```
 
+**InMail Subject — pick one:**
+1. Senior PM, Growth — Airbnb Application
+2. Excited about the Growth PM role at Airbnb
+3. Following up on my application
 
-
-**InMail — Option A (low pressure)**
+**InMail — Option A (Standard)**
 ```
 Hi Sarah,
 
@@ -98,13 +96,29 @@ Best,
 [Your name]
 ```
 
+**InMail — Option C (Minimalist)**
+```
+Hi Sarah,
+
+I recently applied for the Senior PM, Growth role at Airbnb and would 
+love to be considered. With 5+ years in growth product and a track 
+record of running 100+ A/B tests — more details in my attached CV. 
+If you could help flag my application, or point me to other roles 
+that might be a better fit, I'd really appreciate it!
+
+Best,
+[Your name]
+```
+
 ## Philosophy
 
 Cold outreach on LinkedIn is awkward for everyone. This skill doesn't try to make it feel effortless — it just makes sure that when you do reach out, the message is specific, honest about fit, and respectful of the other person's time.
 
-Generic messages get ignored. This one won't be.
+The Minimalist option exists for the same reason: sometimes the kindest thing you can do is keep it short.
 
-## Using with other AI tools? 
+Generic messages get ignored. These won't be.
+
+## Using with other AI tools
 
 The logic in SKILL.md works as a system prompt for any LLM — paste it into ChatGPT Custom Instructions, a GPT system prompt, or Cursor rules.
 
